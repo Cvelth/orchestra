@@ -44,4 +44,6 @@ components:
     check_branch:
       - ./libexec/revng/revng-check-conventions --force-format --HEAD --check-commit
       - orc shell -c revng cmake . && orc install revng
+    check_branch_pedantic:
+      - orc shell -c revng cmake . && orc install revng && ./libexec/revng/revng-check-conventions --force-format --HEAD --check-commit
     builds: #@ typical_cmake_builds(**build_args())
